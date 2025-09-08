@@ -45,31 +45,7 @@
 //     type();
 
 
-        // Simple typing effect
-const texts = ["I'm a Web Developer.", "I'm a Graphic Designer.", "I'm a Facilitator."];
-    let count = 0;
-    let index = 0;
-    let currentText = '';
-    let letter = '';
-
-    function type() {
-      if (count === texts.length) {
-        count = 0;
-      }
-      currentText = texts[count];
-      letter = currentText.slice(0, ++index);
-
-      document.getElementById('text').textContent = letter;
-
-      if (letter.length === currentText.length) {
-        count++;
-        index = 0;
-        setTimeout(type, 1000); // wait before typing next
-      } else {
-        setTimeout(type, 100);
-      }
-    }
-    type();
+       
 
 
         // Header scroll effect
@@ -88,4 +64,5 @@ const texts = ["I'm a Web Developer.", "I'm a Graphic Designer.", "I'm a Facilit
             e.preventDefault();
             alert('Sent. Thanks for your message!');
             contactForm.reset();
+
         });
